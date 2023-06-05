@@ -1,0 +1,571 @@
+/* You can add global styles to this file, and also import other style files */
+/* general css */
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('assets/font/365834cfa7beb7ca64c00476397ddc32.eot'),
+        url('assets/font/365834cfa7beb7ca64c00476397ddc32.ttf'),
+        url('assets/font/365834cfa7beb7ca64c00476397ddc32.woff2'),
+
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+
+.font-family-akira {
+    font-family: 'Lato', serif;
+}
+
+.font-family-Helvetica {
+   font-family: 'Lato', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.h1 {
+    background: -webkit-linear-gradient(LEFT, #21DDB0 0%, #8054FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading .h4 {
+    background: -webkit-linear-gradient(left, #21DDB0 48%, #8054FF 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0%;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+/* .text-truncate-8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis
+} */
+
+.v-height{
+    height: 400px;
+}
+.btn {
+    background-image: linear-gradient(to right, #006175 0%, #00a9508c 100%);
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 45px;
+    margin: 0 auto;
+    padding: 1px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 190px;
+    z-index: 2;
+}
+
+.reverse-btn {
+    background: linear-gradient(90deg, rgba(33, 221, 176, 0.2) 0%, rgba(128, 84, 255, 0.2) 100%);
+    border-image: linear-gradient(to bottom, rgb(0, 255, 195), rgba(64, 0, 255, 0.2)) 1;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    border: none;
+    width: 210px;
+    padding: 5px 0;
+}
+
+.inptFld {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-image: linear-gradient(#000, #000), linear-gradient(#21DDB0 0%, #8054FF 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #ffffff;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn span {
+    align-items: center;
+    background: #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background .5s ease;
+    width: 100%;
+}
+
+.btn:hover span {
+    background: transparent;
+}
+
+.max-90 {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.max-width-slide-img{
+    max-width: 300px;
+}
+
+/* navbar */
+.navbar-brand img {
+    max-height: 80px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("assest/images/toogle.png");
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    /* font-family:'Akira Expanded';
+    font-weight: 800; */
+    white-space: nowrap;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    background: -webkit-linear-gradient(LEFT, #21DDB0 20%, #8054FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ECO-SYSTEM {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.wd-55 {
+    width: 55%;
+}
+
+.fsize-3 {
+    font-size: 3.4rem;
+}
+.fsize-1 {
+    font-size: 1.5rem;
+}
+/* content */
+.txt-content{
+    position: relative;
+}
+.txt-content::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2c2b2bad;
+}
+.display-content{
+    display: flex;
+    justify-content: center;
+   position: absolute;
+   /* background-color: rgb(0, 0, 0, 0.30); */
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 2;
+}
+
+.content-txt-dv-1 {
+    background: url(assest/images/1-box.png);
+}
+
+.content-txt-dv-2 {
+    background: url(assest/images/2-box.png);
+}
+
+.content-txt-dv-3 {
+    background: url(assest/images/3-box.png);
+}
+
+.content-txt-dv-4 {
+    background: url(assest/images/4-box.png);
+}
+
+.content-txt-dv-1,
+.content-txt-dv-3,
+.content-txt-dv-2,
+.content-txt-dv-4 {
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* new-slider-code start */
+
+/* Slider */
+
+
+/* .fheight {
+    height: 400px!important;
+} */
+
+
+/* team */
+
+.team-bg {
+    background: url(assest/images/38.png) !important;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    background-size: 100% 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.member-img {
+    max-width: 180px;
+}
+
+/* quetion-section */
+
+.accordion-item {
+    background-color: transparent;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed),
+.accordion-item:last-of-type .accordion-button.collapsed {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-image: linear-gradient(#000, #000), linear-gradient(#21DDB0 0%, #8054FF 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    margin-bottom: 20px;
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+    background-image: url(assest/images/plusicon.png);
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 10px;
+}
+
+/* footer */
+
+.quick-links ul {
+    padding: 0;
+    margin-right: 30px;
+}
+
+.quick-links li {
+    list-style-type: none;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.quick-links li a {
+    color: #fff;
+    font-weight: 100;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+        Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.quick-links a {
+    height: 40px;
+}
+
+.footer-img {
+    width: 30px;
+}
+
+.social-list li {
+    display: inline-block;
+    padding: 0 15px 00 0px;
+}
+
+.bunch-ffoter {
+    padding: 0 0 0px 65px;
+}
+
+/* timeline */
+.desktop-timline {
+    height: 2000px;
+    padding: 20px;
+}
+
+.road-map-line {
+    width: 3px;
+    background: -webkit-linear-gradient(top, #21DDB0 0%, #8054FF 100%);
+    height: 1900px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+}
+
+.middle-icon-design,
+.middle-icon-design-1,
+.middle-icon-design-2,
+.middle-icon-design-3 {
+    position: absolute;
+    top: 177px;
+    left: 50%;
+    transform: translateX(-27.5%);
+    display: block;
+}
+
+.middle-icon-design-1 {
+    top: 35%;
+    transform: translateX(-72%);
+}
+
+.middle-icon-design-2 {
+    top: 60%;
+}
+
+.middle-icon-design-3 {
+    top: 85%;
+    transform: translateX(-72%);
+}
+
+.odd-position {
+    right: 8%;
+    position: absolute;
+}
+
+.even-position {
+    position: absolute;
+    top: 55%;
+}
+
+.even-2-position {
+    position: absolute;
+    right: 8%;
+    top: 75%;
+}
+
+.road-map-bg-desk {
+    background: url(assest/images/road-map-bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+    max-width: 350px;
+    text-align: start;
+    padding: 30px;
+    max-height: 530px;
+}
+
+.year {
+    margin: 0 auto;
+    max-width: 0;
+}
+.slick-prev,
+.slick-next{
+    display: none !important;
+}
+.road-map-bg {
+    background: url(assest/images/road-map-bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: start;
+    padding: 30px;
+}
+
+.road-map-bg ul li {
+    list-style-type: none;
+}
+
+.bottom-arrow-roadmap {
+    left: 50%;
+    transform: translateX(-44%);
+    bottom: 12px;
+    position: absolute;
+}
+
+.accordion-body {
+    color:#ffffff;
+}
+
+.para-details {
+    min-height: 265px;
+    vertical-align: middle;
+}
+
+/* animations */
+
+
+/* media query */
+
+@media(max-width:1299px) {
+    .btn {
+        font-size: 12px;
+        width: 140px;
+    }
+}
+
+@media(max-width:1199px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 15px !important;
+        font-size: 12px !important;
+    }
+
+    .navbar-brand img {
+        max-height: 60px;
+    }
+
+    .btn {
+        width: 125px;
+    }
+}
+
+@media(max-width:991px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .text-truncate-8 {
+        -webkit-line-clamp: 5;
+        max-height: 100px;
+    }
+}
+
+@media(max-width:767px) {
+    .navbar-collapse{
+        background-color: #000;
+    }
+    .para-details {
+        min-height: 500px;
+     }
+    .v-height{
+        height: 400px;
+    }
+    .team-bg {
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+       height: 100vh;
+    }
+    .max-width-slide-img{
+      
+        height: 180px;
+    }
+    p{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .content-txt-dv-1,
+    .content-txt-dv-3,
+    .content-txt-dv-2,
+    .content-txt-dv-4 {
+        min-height: 200px;
+    }
+
+    .world-img {
+        max-height: 500px;
+    }
+
+    .gallery-photos {
+        width: 75% !important;
+        margin-bottom: 40px;
+    }
+
+    .img-gallery-2 img {
+        max-width: 50%;
+        top: 40%;
+        left: 24%;
+        z-index: 8;
+    }
+
+    .partner-logo-img {
+        width: 65% !important;
+    }
+}
+
+@media(max-width:575px) {
+    .wrapper {
+        height: auto;
+        display: block;
+    }
+
+    .wd-55 {
+        width: 55%;
+    }
+    
+    .fsize-3 {
+        font-size: 1rem;
+    }
+    .fsize-1 {
+        font-size: 0.5rem;
+    }
+
+    .display-content{
+        position: inherit !important;
+        display: flex;
+        justify-content: center;
+        transform: inherit;
+        background: #000;
+       /* position: absolute;
+       background-color: rgb(0, 0, 0, 0.30);
+       top: 7%; */
+    }
+    
+    .wrapper .slick-slide img {
+   
+    display: block;
+    border-radius: 18px;
+    }
+
+    .fheight {
+    height: auto!important;
+}
+}
+
+.p-left-5 {
+    padding-left: 70px;
+}
+
+.zind {
+    z-index: 3;
+}
