@@ -7,7 +7,6 @@ import Road from './Pages/Road';
 import VerticalMode from "./components/slider";
 import FaqPage from './Pages/FaqPage';
 import TeamPage from './TeamPage';
-
 function App() {
   return (
   <>
