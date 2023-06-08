@@ -7,6 +7,7 @@ import Road from './Pages/Road';
 import VerticalMode from "./components/slider";
 import FaqPage from './Pages/FaqPage';
 import TeamPage from './TeamPage';
+// import ReactForm from './components/ReactForm'
 function App() {
   return (
   <>
@@ -17,6 +18,7 @@ function App() {
   <VerticalMode/>
 <TeamPage></TeamPage>
 <FaqPage></FaqPage>
+{/* <ReactForm></ReactForm> */}
   <Footer />
   </>
   );

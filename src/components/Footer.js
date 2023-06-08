@@ -20,26 +20,19 @@ const Footer = () => {
         action.resetForm();
       },
     });
-  const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_rsuxm6s",
-        "template_vxfpvgn",
-        form.current,
-        "CKUa0gU9DHsu1jh_i"
-      )
-      .then(
-        (result) => {
+    function sendEmail(e) {
+      e.preventDefault();
+
+  emailjs.sendForm('service_rsuxm6s', 'template_vxfpvgn', e.target, 'CKUa0gU9DHsu1jh_i')
+      .then((result) => {
           console.log(result.text);
-        },
-        (error) => {
+      }, (error) => {
           console.log(error.text);
-        }
-      );
-  };
+      });
+      e.target.reset()
+  }
+
 
   return (
     <>
@@ -87,7 +80,7 @@ const Footer = () => {
                   All fileds are required. Please fill all information.
                 </p> */}
               </div>
-              <form ref={form} onSubmit={sendEmail}>
+              <form  onSubmit={sendEmail} >
                 <div className="row">
                   <div className="col-sm-6">
                     <input
@@ -96,7 +89,6 @@ const Footer = () => {
                       name="name"
                       placeholder="Your Name"
                       className="inptFld"
-                      value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
@@ -113,7 +105,6 @@ const Footer = () => {
                       name="email"
                       placeholder="Email Address"
                       className="inptFld"
-                      value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
@@ -130,7 +121,6 @@ const Footer = () => {
                       name="phone"
                       placeholder="Phone Number"
                       className="inptFld"
-                      value={values.phone}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
@@ -148,7 +138,6 @@ const Footer = () => {
                       placeholder="Subject"
                       className="inptFld"
                       required
-                      value={values.sub}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
@@ -165,7 +154,6 @@ const Footer = () => {
                       rows=""
                       cols=""
                       placeholder="Your Message..."
-                      value={values.mesg}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
@@ -184,6 +172,9 @@ const Footer = () => {
                         value="Submit"
                         className="inptBtn reverse-btn"
                       />
+                        {errors.submit && touched.submit ? (
+                      <p className="form-error text-dander">{errors.submit}</p>
+                    ) : null}
                     </div>
                   </div>
                 </div>

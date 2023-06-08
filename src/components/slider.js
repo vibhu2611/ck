@@ -11,8 +11,8 @@ export default class VerticalMode extends Component {
       vertical: true,
       verticalSwiping: true,
       autoplay: true,
-      speed: 3000,
-      autoplaySpeed: 3000,
+      speed: 2000,
+      autoplaySpeed: 2000,
 
       beforeChange: function(currentSlide, nextSlide) {
       },
