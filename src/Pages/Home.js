@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="txt-content bg-black">
+      <section className="txt-content mb-5">
         <video
           className="w-100 position-relative"
           playsInline

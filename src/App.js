@@ -7,7 +7,7 @@ import Road from './Pages/Road';
 import VerticalMode from "./components/slider";
 import FaqPage from './Pages/FaqPage';
 import TeamPage from './TeamPage';
-// import ReactForm from './components/ReactForm'
+import Partner from './Pages/Partner';
 function App() {
   return (
   <>
@@ -15,10 +15,10 @@ function App() {
   <Home />
   <Eco></Eco>
   <Road></Road>
-  <VerticalMode/>
 <TeamPage></TeamPage>
+<VerticalMode/>
+<Partner/>
 <FaqPage></FaqPage>
-{/* <ReactForm></ReactForm> */}
   <Footer />
   </>
   );

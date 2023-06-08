@@ -3,7 +3,7 @@ import React from 'react'
 export default function Road() {
   return (
     <>
-    <section className="text-center bg-black py-4" id="roadmap">
+    <section className="text-center mb-5 py-4" id="roadmap">
         <div className="heading py-3 py-md-5">
             <div className="h4 fw-bold font-family-akira">ROADMAP</div>
         </div>

@@ -1,42 +1,36 @@
-// import React from "react";
-import { contactUsSchema } from "../schemas";
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useFormik } from "formik";
 
 const Footer = () => {
-  let initialValues = {
-    name: "",
-    email: "",
-    phone: "",
-    sub: "",
-    mesg: "",
-  };
-  const { values, errors, touched, handleBlur, handleChange } =
-    useFormik({
-      initialValues,
-      validationSchema: contactUsSchema,
-      onSubmit: (values, action) => {
-        action.resetForm();
-      },
-    });
 
-    function sendEmail(e) {
-      e.preventDefault();
+const [status,setStatus] = useState ('');
 
-  emailjs.sendForm('service_rsuxm6s', 'template_vxfpvgn', e.target, 'CKUa0gU9DHsu1jh_i')
-      .then((result) => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_yhjxezi",
+        "template_tgtvvbx",
+        e.target,
+        "_8BySXajTxA8wOPsqY"
+      )
+     
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset()
+        },
+        (error) => {
+          alert(error.abc);
+        }
+      );
+    e.target.reset();
+    setStatus('Sucess')
   }
-
 
   return (
     <>
-      <footer className="text-center pb-5 bg-black" id="contact-us">
+      <footer className="text-center mb-5" id="contact-us">
         <div className="heading py-3 py-md-5">
           <div className="h4 fw-bold font-family-akira">CONTACT US</div>
         </div>
@@ -57,6 +51,9 @@ const Footer = () => {
                   <li>
                     <a href="#roadmap">ROADMAP</a>
                   </li>
+                  <li>
+                  <a href="/privacy-policy">PRIVACY POLICY</a>
+                  </li>
                 </ul>
                 <ul>
                   <li>
@@ -68,6 +65,7 @@ const Footer = () => {
                   <li>
                     <a href="#contact-us">CONTACT US</a>
                   </li>
+                 
                 </ul>
               </div>
             </div>
@@ -76,42 +74,30 @@ const Footer = () => {
                 Get in touch with us
               </div>
               <div className="col-md-12 vali">
-                {/* <p className="text-danger text-start">
-                  All fileds are required. Please fill all information.
-                </p> */}
+              {status && renderAlert ()}
               </div>
-              <form  onSubmit={sendEmail} >
+              <form onSubmit={sendEmail}>
                 <div className="row">
                   <div className="col-sm-6">
                     <input
                       type="text"
                       id="name"
-                      name="name"
+                      name="from_name"
                       placeholder="Your Name"
                       className="inptFld"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                       required
                     />
-                    {errors.name && touched.name ? (
-                      <p className="form-error text-warning">{errors.name}</p>
-                    ) : null}
                   </div>
 
                   <div className="col-sm-6">
                     <input
                       type="email"
                       id="email"
-                      name="email"
+                      name="from_email"
                       placeholder="Email Address"
                       className="inptFld"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                       required
                     />
-                    {errors.email && touched.email ? (
-                      <p className="form-error text-warning">{errors.email}</p>
-                    ) : null}
                   </div>
 
                   <div className="col-sm-6">
@@ -121,46 +107,31 @@ const Footer = () => {
                       name="phone"
                       placeholder="Phone Number"
                       className="inptFld"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                       required
                     />
-                    {errors.phone && touched.phone ? (
-                      <p className="form-error text-warning">{errors.phone}</p>
-                    ) : null}
                   </div>
 
                   <div className="col-sm-6">
                     <input
                       type="text"
                       id="sub"
-                      name="sub"
+                      name="subject"
                       placeholder="Subject"
                       className="inptFld"
                       required
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                     />
-                    {errors.sub && touched.sub ? (
-                      <p className="form-error text-warning">{errors.sub}</p>
-                    ) : null}
                   </div>
 
                   <div className="col-12">
                     <textarea
                       className="inptFld"
                       id="mesg"
-                      name="mesg"
+                      name="message"
                       rows=""
                       cols=""
                       placeholder="Your Message..."
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                       required
                     ></textarea>
-                    {errors.mesg && touched.mesg ? (
-                      <p className="form-error text-warning">{errors.mesg}</p>
-                    ) : null}
                   </div>
 
                   <div className="col-12">
@@ -172,9 +143,6 @@ const Footer = () => {
                         value="Submit"
                         className="inptBtn reverse-btn"
                       />
-                        {errors.submit && touched.submit ? (
-                      <p className="form-error text-dander">{errors.submit}</p>
-                    ) : null}
                     </div>
                   </div>
                 </div>
@@ -263,4 +231,9 @@ const Footer = () => {
     </>
   );
 };
+const renderAlert = () =>(
+<div className="text-info h6 pb-3">
+Your message has been sent. Thank you.
+</div>
+)
 export default Footer;
