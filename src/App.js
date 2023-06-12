@@ -8,10 +8,36 @@ import VerticalMode from "./components/slider";
 import FaqPage from './Pages/FaqPage';
 import TeamPage from './TeamPage';
 import Partner from './Pages/Partner';
+import Privacy from './Pages/Privacy';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
   return (
   <>
   <Header />
+  <Router>
+  <Switch>
+    <Route exact path="/privacy-policy">
+    <Privacy />
+    </Route>
+    <Route exact path="/">
+  <Home />
+  <Eco></Eco>
+  <Road></Road>
+<TeamPage></TeamPage>
+<VerticalMode/>
+<Partner/>
+<FaqPage></FaqPage>
+    </Route>
+  </Switch>
+  </Router>
+  <Footer />
+  {/* <Header />
   <Home />
   <Eco></Eco>
   <Road></Road>
@@ -20,6 +46,8 @@ function App() {
 <Partner/>
 <FaqPage></FaqPage>
   <Footer />
+<Privacy>
+</Privacy> */}
   </>
   );
 }

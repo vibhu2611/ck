@@ -552,19 +552,21 @@ a {
     }
 
     .display-content {
-        text-align: center;
+        /* text-align: center;
         position: inherit !important;
         display: flex;
         justify-content: center;
         transform: inherit;
-        background: #000;
-        /* position: absolute;
+        background: #000; */
        background-color: rgb(0, 0, 0, 0.30);
-       top: 7%; */
+       /* top: 7%; */
     }
 }
 
 @media(max-width:767px) {
+    .marg10 {
+        margin-top: 21%;
+    }
     .navbar-collapse {
         background-color: #000;
     }

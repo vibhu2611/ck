@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const Footer = () => {
 
@@ -13,7 +19,7 @@ const [status,setStatus] = useState ('');
         "service_yhjxezi",
         "template_tgtvvbx",
         e.target,
-        "_8BySXajTxA8wOPsqY"
+        "_8BySXajTxA8wOPqY"
       )
      
       .then(
@@ -21,7 +27,7 @@ const [status,setStatus] = useState ('');
           console.log(result.text);
         },
         (error) => {
-          alert(error.abc);
+          console.log(error.text);
         }
       );
     e.target.reset();
@@ -51,9 +57,11 @@ const [status,setStatus] = useState ('');
                   <li>
                     <a href="#roadmap">ROADMAP</a>
                   </li>
+                  <Router>
                   <li>
-                  <a href="/privacy-policy">PRIVACY POLICY</a>
+                  <a href="/privacy-policy" target="_blank">PRIVACY POLICY</a>
                   </li>
+              </Router>
                 </ul>
                 <ul>
                   <li>

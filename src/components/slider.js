@@ -22,8 +22,8 @@ export default class VerticalMode extends Component {
     return (
       < >
       <section className=" mb-5">
-      <div class="heading py-3 py-md-5">
-            <div class="h4 fw-bold font-family-akira text-center">GALLERY</div>
+      <div className="heading py-3 py-md-5">
+            <div className="h4 fw-bold font-family-akira text-center">GALLERY</div>
         </div>
       <Slider {...settings}>
       
