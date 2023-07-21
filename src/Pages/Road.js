@@ -32,7 +32,7 @@ export default function Road() {
                     </div>
                 </div>
                 <div className="col-md-12">
-                    <div className="road-map-bg-desk w-100 mb-5">
+                    <div className="road-map-bg-desk w-100 mb-5 slide-right">
                         <div className="font-family-Helvetica">
                             Q1
                             <ul>
@@ -59,7 +59,7 @@ export default function Road() {
                     </div>
                 </div>
                 <div className="col-md-12 ">
-                    <div className="road-map-bg-desk w-100 mb-5 odd-position">
+                    <div className="road-map-bg-desk w-100 mb-5 odd-position slide-right">
                         <div className="font-family-Helvetica">
                             Q1
                             <ul>
@@ -88,7 +88,7 @@ export default function Road() {
                     </div>
                 </div>
                 <div className="col-md-12 ">
-                    <div className="road-map-bg-desk w-100 mb-5 even-position">
+                    <div className="road-map-bg-desk w-100 mb-5 even-position slide-right">
                         <div className="font-family-Helvetica">
                             Q1
                             <ul>
@@ -120,7 +120,7 @@ export default function Road() {
                 </div>
 
                 <div className="col-md-12 ">
-                    <div className="road-map-bg-desk w-100 mb-5 even-2-position">
+                    <div className="road-map-bg-desk w-100 mb-5 even-2-position slide-left">
                         <div className="font-family-Helvetica">
                             Q1
                             <ul>

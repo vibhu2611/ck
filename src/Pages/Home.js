@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="txt-content mb-5 marg10">
+      <section className="txt-content mb-5" id="Home">
         <video
           className="w-100 position-relative"
           playsInline
@@ -30,24 +30,24 @@ export default function Home() {
         />
         <div className="container-fluid">
           <div className="row  d-flex justify-content-center align-items-center">
-            <div className="col-md-12 display-content">
-              <div className="p-5 pb-md-0">
-                <div className="h1 fsize-3 text-uppercase fw-bold font-family-akira">
+            <div className="col-md-12 display-content marg10">
+              <div className="p-0 pb-md-0 p-md-5">
+                <div className="h1 text-uppercase fw-bold font-family-akira text-center">
                   CinemaKoin Multi - Utility Coin
                 </div>
-                <ul className="text-white mx-auto wd-55 font-family-Helvetica lh-lg">
-                  <li className="fsize-1">
+                <ul className="text-white mx-auto wd-55 font-family-Helvetica fs-4">
+                  <li>
                     Cinemaverse for Metaverse Enthusiast
                   </li>
-                  <li className="fsize-1">
+                  <li>
                     Cinemachain for Developers & Community
                   </li>
-                  <li className="fsize-1">C-Swap for Traders & Investors</li>
-                  <li className="fsize-1">
+                  <li>C-Swap for Traders & Investors</li>
+                  <li>
                     Cine-Marketplace for Artist & Creators
                   </li>
                 </ul>
-                <div className="h1 fsize-3 text-center text-uppercase fw-bold font-family-akira">
+                <div className="h1 text-center text-uppercase fw-bold font-family-akira">
                   Join the Revolution
                 </div>
               </div>

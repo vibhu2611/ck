@@ -59,7 +59,7 @@ const [status,setStatus] = useState ('');
                   </li>
                   <Router>
                   <li>
-                  <a href="/privacy-policy" target="_blank">PRIVACY POLICY</a>
+                  <a href="/privacy-policy">PRIVACY POLICY</a>
                   </li>
               </Router>
                 </ul>

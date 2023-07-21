@@ -20,10 +20,9 @@ export default function Header() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                      <Router>
                       <ul className="navbar-nav  mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active fw-bold" to="/">HOME</Link>
+                                <a className="nav-link active fw-bold" href="/">HOME</a>
                             </li>
                             <li className="nav-item">
                             
@@ -42,18 +41,17 @@ export default function Header() {
                                 <a className="nav-link fw-bold px-3" href="#contact-us">CONTACT US</a>
                             </li>
                         </ul>
-                      </Router>
                       
-                        <form className="d-grid flex-wrap flex-md-nowrap d-md-flex justify-content-center">
-                            <a className="btn ms-0 fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2"
+                        <form className="d-grid flex-wrap flex-md-nowrap d-md-flex justify-content-center pb-4 pb-lg-0">
+                            <a className="btn  fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2"
                                 href="https://cinemakoin.io/cinemakoin-litepaper.pdf"
                                 download="cinemakoin-litepaper.pdf">
                                 <span>LITEPAPER</span>
                             </a>
-                            <a className="btn ms-0 fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2" href="https://typebot.io/ck-lead">
+                            <a className="btn fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2" href="https://typebot.io/ck-lead">
                                 <span>JOIN WAITLIST</span>
                             </a>
-                            <a className="btn ms-0 fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2"
+                            <a className="btn fw-bold mb-2 mb-md-0 ms-xl-3 ms-lg-2"
                                 href="https://ckweb.thedevelopers.company/wp-content/uploads/2023/03/app-release.apk">
                                 <span>CK MOBILE WALLET</span>
                             </a>

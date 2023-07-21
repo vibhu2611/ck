@@ -9,11 +9,13 @@ import FaqPage from './Pages/FaqPage';
 import TeamPage from './TeamPage';
 import Partner from './Pages/Partner';
 import Privacy from './Pages/Privacy';
+import GoToTop from './components/GoToTop';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Routes
 } from "react-router-dom";
 
 function App() {
@@ -21,21 +23,24 @@ function App() {
   <>
   <Header />
   <Router>
-  <Switch>
-    <Route exact path="/privacy-policy">
-    <Privacy />
+  <Routes>
+    <Route exact path="/privacy-policy" element={<Privacy />}>
     </Route>
-    <Route exact path="/">
-  <Home />
+    <Route exact path="/" element={
+      <>
+        <Home />
   <Eco></Eco>
   <Road></Road>
 <TeamPage></TeamPage>
 <VerticalMode/>
 <Partner/>
 <FaqPage></FaqPage>
+      </>
+    }>
     </Route>
-  </Switch>
+  </Routes>
   </Router>
+  <GoToTop />
   <Footer />
   {/* <Header />
   <Home />

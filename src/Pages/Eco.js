@@ -8,9 +8,9 @@ export default function Eco() {
             <div className="h4 fw-bold font-family-akira">ECO-SYSTEM</div>
         </div>
         <div className="container-fluid">
-            <div className="row px-3 ECO-SYSTEM">
+            <div className="row px-0 px-md-3 ECO-SYSTEM">
                 <div className="col-md-6 col-12">
-                    <div className="content-txt-dv-1 w-100 mb-5">
+                    <div className="content-txt-dv-1 w-100 mb-5 fade-in one">
                         <div className="para-details">
                             <div className="h4 text-uppercase text-white mt-3 font-family-akira">
                                 Cinemaverse
@@ -33,7 +33,7 @@ export default function Eco() {
 
                 </div>
                 <div className="col-md-6 col-12">
-                    <div className="content-txt-dv-2 w-100 mb-5">
+                    <div className="content-txt-dv-2 w-100 mb-5 fade-in two">
                         <div className="para-details ">
                             <div className="h4 text-uppercase text-white mt-3 font-family-akira">
                                 Cinemachain
@@ -50,7 +50,7 @@ export default function Eco() {
 
                 </div>
                 <div className="col-md-6 col-12">
-                    <div className="content-txt-dv-3 w-100 mb-5">
+                    <div className="content-txt-dv-3 w-100 mb-5 fade-in three">
                         <div className="para-details ">
                             <div className="h4 text-uppercase text-white mt-3 font-family-akira">
                                 CINE - NFTPLACE
@@ -66,7 +66,7 @@ export default function Eco() {
 
                 </div>
                 <div className="col-md-6 col-12 ">
-                    <div className="content-txt-dv-4 w-100 mb-5">
+                    <div className="content-txt-dv-4 w-100 mb-5 fade-in four">
                         <div className="para-details ">
                             <div className="h4 text-uppercase text-white mt-3 font-family-akira">
                                 C-Swap EXCHANGE
